@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>updatePage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    Question: <ion-input [(ngModel)]="fullData.Question"></ion-input>
+  </ion-item>
+  <ion-item
+    >Answer: <ion-input class = "ion-text-wrap" [(ngModel)]="fullData.Answer"></ion-input
+  ></ion-item>
+  <ion-button type="submit" (click)="update()" [disabled]="buttonDisabled">Update</ion-button>
+  <ion-button type="submit" (click)="insert()">Insert</ion-button>
+  <ion-button type="submit" (click)="delete()" [disabled]="buttonDisabled">Delete</ion-button>
+</ion-content>
